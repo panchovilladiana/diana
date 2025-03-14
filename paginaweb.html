@@ -1,0 +1,157 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Delights Restaurante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Barra de Menú Principal -->
+    <nav id="barra-menu-principal">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#platos-a-la-carta">Platos a la Carta</a></li>
+            <li><a href="#comida-corriente">Comida Corriente</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#carrito">Carrito</a></li>
+            <li><a href="#contactos">Contactos</a></li>
+            <li><a href="#sobre-nosotros">sobrenosotros</a></li>
+        </ul>
+    </nav>
+
+    <!-- Portada de Inicio -->
+    <header id="inicio">
+        <div class="portada">
+            <img src="C:\Users\Usuario\Downloads\restaurante\j.s\imagenes\restaurante imagenn.jpg" alt="portada">
+            <div class="portada-texto">
+                <h1>Bienvenidos a My Delights</h1>
+                <p>Donde la calidad y el sabor se encuentran en cada plato.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección "Sobre Nosotros" -->
+    <section id="sobre-nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>Estamos ubicado al norte de la cuidad de Bogotános ofrecesmos a nuestros clientes la mejor experiencia gastronómica 
+ Nuestro equipo de chefs se esfuerza cada día por crear platos deliciosos, frescos y de la más alta calidad. Ya sea que nos visites en nuestro restaurante o disfrutes de nuestros servicios a domicilio, garantizamos que cada comida será inolvidable.</p>
+        <p>¡Te invitamos a conocernos mejor y a disfrutar de un ambiente acogedor y una cocina excepcional!</p>
+    </section>
+
+
+    <!-- Menú de platos a la carta -->
+    <section id="platos-a-la-carta">
+        <h2>Platos a la Carta</h2>
+        <div class="plato">
+            <img src="C:\Users\Usuario\Downloads\restaurante\j.s\imagenes\arroz con frijoles.jpg" alt="Arroz con Frijoles">
+            <h3>Arroz con Frijoles</h3>
+            <p>Ingredientes: Arroz, frijoles, ensalada</p>
+            <p>Precio: $12,000</p>
+            <button onclick="agregarAlCarrito('Arroz con Frijoles', 12000)">Agregar al carrito</button>
+        </div>
+        <!-- Agregar más platos según sea necesario -->
+    </section>
+    
+    <section id="comida-corriente">
+        <h2>Comida Corriente</h2>
+    
+        <h3>Sopas</h3>
+        <div class="plato">
+            <img src="C:\Users\Usuario\Downloads\restaurante\j.s\imagenes\sopa de pollo.jpg" alt="Sopa de Pollo">
+            <p>Ingredientes: Pollo, verduras, arroz</p>
+            <p>Precio: $18,000</p>
+            <button onclick="agregarAlCarrito('Sopa de Pollo', 18000)">Agregar al carrito</button>
+        </div>
+    
+        <h3>Principios</h3>
+        <div class="plato">
+            <img src="C:\Users\Usuario\Downloads\restaurante\j.s\imagenes\arroz con frijoles.jpg" alt="Arroz con Frijoles">
+            <p>Ingredientes: Arroz, frijoles, ensalada</p>
+            <p>Precio: $12,000</p>
+            <button onclick="agregarAlCarrito('Arroz con Frijoles', 12000)">Agregar al carrito</button>
+        </div>
+    
+        <h3>Carnes</h3>
+        <div class="plato">
+            <img src="C:\Users\Usuario\Downloads\restaurante\j.s\imagenes\carne asada.jpg" alt="Carne Asada">
+            <p>Ingredientes: Carne, papas, ensalada</p>
+            <p>Precio: $25,000</p>
+            <button onclick="agregarAlCarrito('Carne Asada', 25000)">Agregar al carrito</button>
+        </div>
+    </section>
+    
+    <section id="servicios">
+        <h2>Servicios</h2>
+    
+        <h3>Banquetes</h3>
+        <div class="servicio">
+            <img src="C:\Users\Usuario\Downloads\restaurante\j.s\imagenes\vanquette.jpg" alt="Banquete">
+            <p>Incluye carne, ensalada, postre, bebidas. Precio por persona: $50,000</p>
+            <button onclick="agregarAlCarrito('Banquete', 50000)">Agregar al carrito</button>
+        </div>
+    
+        <h3>Eventos Familiares</h3>
+        <div class="servicio">
+            <img src="C:\Users\Usuario\Downloads\restaurante\j.s\imagenes\vanquette.jpg" alt="Evento Familiar">
+            <p>Incluye buffet y decoración. Precio por persona: $60,000</p>
+            <button onclick="agregarAlCarrito('Evento Familiar', 60000)">Agregar al carrito</button>
+        </div>
+    </section>
+    
+    <!-- Carrito de Compras -->
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Total: <span id="total-compra">$0</span></p>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+
+    
+              
+
+    <section id="registro">
+        <form action="/agregar-cliente" method="POST">
+            <h2>Registro de Cliente</h2>
+            <input type="text" name="cedula" placeholder="Número de Cédula" required>
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="sexo" placeholder="Sexo (Masculino/Femenino)" required>
+            <input type="date" name="fecha_nacimiento" required>
+            <input type="text" name="direccion" placeholder="Dirección" required>
+            <input type="tel" name="telefono" placeholder="Teléfono Celular" required>
+            <input type="email" name="correo" placeholder="Correo Electrónico" required>
+            <button type="submit">Registrar Cliente</button>
+        </form>
+    </section>
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes contactarnos a través de nuestro formulario o redes sociales.</p>
+        
+        <div class="contacto-barra">
+            <div class="contacto-item">
+                <img src="C:\Users\Usuario\Downloads\restaurante\j.s\imagenes\telegram.jpg" alt="Telegram">
+                <p>12348239</p>
+                <p>@somosinfinitos</p>
+            </div>
+        
+            <div class="contacto-item">
+                <img src="C:\Users\Usuario\Downloads\restaurante\j.s\imagenes\whatsapp.jpg" alt="WhatsApp">
+                <p>12348239</p>
+            </div>
+        
+            <div class="contacto-item">
+                <img src="C:\Users\Usuario\Downloads\restaurante\j.s\imagenes\telefono.jpg" alt="Teléfono">
+                <p>426111</p>
+            </div>
+        
+            <div class="contacto-item">
+                <img src="C:\Users\Usuario\Downloads\restaurante\j.s\imagenes\cheftt.jpg" alt="Chef">
+                <p>"Contáctanos, estaremos encantados de atenderte y hacer de tu experiencia algo especial."</p>
+            </div>
+        </div>
+    </section>
+    

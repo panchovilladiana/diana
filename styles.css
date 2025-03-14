@@ -1,0 +1,986 @@
+/* Barra de Menú Principal */
+#barra-menu-principal {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+#barra-menu-principal ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+#barra-menu-principal li {
+    display: inline-block;
+    padding: 10px;
+}
+
+#barra-menu-principal a {
+    color: rgb(133, 235, 56);
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    display: block;
+}
+
+#barra-menu-principal a:hover {
+    background-color: #575757;
+}
+
+/* Barra de Menú para el contenido del restaurante */
+#barra-menu {
+    background-color: #333;
+    overflow: hidden;
+}
+
+#barra-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+#barra-menu li {
+    display: inline-block;
+    padding: 10px;
+}
+
+#barra-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    display: block;
+}
+
+#barra-menu a:hover {
+    background-color: #575757;
+}
+
+/* Estilo general para el body y estructura básica */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Secciones */
+section {
+    margin: 20px;
+}
+
+.plato {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.plato img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.detalle-plato {
+    flex-grow: 1;
+}
+
+.detalle-plato h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.detalle-plato p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+/* Carrito */
+#carrito {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Estilos para la sección de contacto */
+#contacto {
+    padding: 30px;
+    background-color: #f5f5f5;
+    text-align: center;
+    border-top: 2px solid #ddd;
+}
+
+#contacto h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contacto p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el cuadro de contacto */
+.contacto-cuadro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los elementos dentro del cuadro de contacto */
+.contacto-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.contacto-item p {
+    font-size: 1.1em;
+    margin: 5px 0;
+    color: #333;
+}
+
+.contacto-item strong {
+    color: #007bff;
+}
+
+.contacto-item:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contacto-cuadro {
+        grid-template-columns: 1fr; /* Columna única en pantallas pequeñas */
+    }
+}
+body {
+    background-color: #dd9090; /* Gris muy claro */
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header, section, footer {
+    padding: 20px;
+}
+
+/* Si quieres un fondo más colorido y atractivo */
+body {
+    background-color: #59c2ef; /* Aguamarina claro */
+}
+/* Barra de Menú Principal */
+#barra-menu-principal {
+    position: fixed; /* Fija la barra al final de la página */
+    bottom: 0; /* La coloca en la parte inferior */
+    width: 100%; /* Se extiende a lo largo de toda la pantalla */
+    background-color: #5fce40; /* Color más claro: Aguamarina claro */
+    color: #333; /* Color de texto oscuro para contraste */
+    padding: 10px 0; /* Espaciado vertical */
+    text-align: center; /* Centra los enlaces */
+}
+
+#barra-menu-principal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Para que los elementos estén en fila */
+    justify-content: center; /* Centra los elementos de la lista */
+}
+
+#barra-menu-principal li {
+    margin: 0 15px; /* Espaciado entre los elementos */
+}
+
+#barra-menu-principal a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #333; /* Color de texto */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#barra-menu-principal a:hover {
+    color: #007bff; /* Cambio de color al pasar el ratón sobre el enlace */
+}
+/* Barra de Menú Principal */
+#barra-menu-principal {
+    position: fixed; /* Fija la barra al final de la página */
+    bottom: 0; /* La coloca en la parte inferior */
+    left: 0; /* Alineación completa desde el borde izquierdo */
+    width: 100%; /* Se extiende a lo largo de toda la pantalla */
+    background-color: #f0f8ff; /* Color de fondo claro */
+    color: #333; /* Color del texto oscuro para buen contraste */
+    padding: 10px 0; /* Espaciado vertical */
+    text-align: center; /* Centra los enlaces */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Añade sombra suave para resaltarlo */
+    z-index: 1000; /* Asegura que quede encima de otros elementos */
+}
+
+#barra-menu-principal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Para que los elementos estén en fila */
+    justify-content: center; /* Centra los elementos de la lista */
+}
+
+#barra-menu-principal li {
+    margin: 0 15px; /* Espaciado entre los elementos */
+}
+
+#barra-menu-principal a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #333; /* Color del texto de los enlaces */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#barra-menu-principal a:hover {
+    color: #007bff; /* Color al pasar el ratón por encima */
+}
+/* Diseño general de las secciones */
+section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los platos y servicios */
+.plato, .servicio {
+    display: inline-block;
+    width: 250px;
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.plato:hover, .servicio:hover {
+    transform: scale(1.05);
+}
+
+/* Imagenes de los platos y servicios */
+.plato img, .servicio img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para los títulos de cada plato o servicio */
+.plato h3, .servicio h3 {
+    font-size: 1.2rem;
+    color: #f28585;
+    font-weight: bold;
+}
+
+/* Estilos para los párrafos */
+.plato p, .servicio p {
+    color: #777;
+    font-size: 1rem;
+}
+
+/* Estilos de los botones */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para la portada */
+header#inicio {
+    position: relative;
+    overflow: hidden;
+}
+
+.portada {
+    position: relative;
+    width: 100%;
+}
+
+.portada img {
+    width: 80%;
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen cubra todo el área */
+    opacity: 0.7; /* Hace que la imagen tenga un efecto suave */
+}
+
+.portada-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el texto */
+    text-align: center;
+    color: #c5ed67; /* Color blanco para el texto */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad para mejorar la visibilidad del texto */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para el título */
+.portada-texto h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+/* Estilo para el párrafo */
+.portada-texto p {
+    font-size: 1.2rem;
+    font-family: 'Verdana', sans-serif;
+    margin-top: 10px;
+}
+
+/* Fondo de la página */
+body {
+    background-color: #f458c3; /* Un color de fondo suave */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Secciones del menú */
+section {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Títulos */
+h2 {
+    font-size: 2.2rem;
+    color: #d62828;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Contenedor en Grid para los platos */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Diseño de cada plato */
+.plato, .servicio {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+.plato:hover, .servicio:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen de los platos */
+.plato img, .servicio img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Precio en negrita y más visible */
+.precio {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #d62828;
+}
+
+/* Botón de Agregar al Carrito */
+button {
+    background-color: #d62828;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #b22222;
+}
+/* Contenedor del formulario */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Altura del formulario */
+    background-color: #f8f9fa; /* Fondo sutil */
+}
+
+/* Estilo del formulario */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/* Estilo de los inputs */
+form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Botón de envío */
+button {
+    background-color: #d62828;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+button:hover {
+    background-color: #b22222;
+}
+/* Asegurar que el contenedor ocupe toda la pantalla y esté centrado */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupar toda la altura */
+    width: 100%;
+    background-color: #f8f9fa; /* Fondo sutil */
+}
+
+/* Formulario más estilizado */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Se adapta mejor a móviles */
+    max-width: 400px; /* No se hace demasiado ancho */
+    text-align: center;
+}
+
+/* Inputs más estéticos */
+form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Botón estilizado */
+button {
+    background-color: #d62828;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+/* Efecto hover en el botón */
+button:hover {
+    background-color: #b22222;
+}
+/* Contenedor que centra el formulario */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la pantalla */
+    width: 100%;
+    background-color: #f8f9fa; /* Fondo suave */
+}
+
+/* Formulario más legible y centrado */
+form {
+    background-color: white;
+    padding: 40px; /* Más espacio interno */
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px; /* Se mantiene legible en móviles y escritorio */
+    text-align: center;
+}
+
+/* Estilo de los inputs */
+form input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+/* Botón más llamativo */
+button {
+    background-color: #d62828;
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* Efecto hover del botón */
+button:hover {
+    background-color: #b22222;
+}
+
+/* Ajuste especial para pantallas pequeñas */
+@media (max-width: 480px) {
+    form {
+        width: 90%;
+        padding: 30px;
+    }
+}
+/* Contenedor para centrar la sección */
+#registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la pantalla */
+    width: 100%;
+    background-color: #f8f9fa; /* Color de fondo suave */
+}
+
+/* Estilo del formulario */
+form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px; /* Se ajusta a móviles y escritorio */
+    text-align: center;
+}
+
+/* Estilos para los campos de entrada */
+form input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+/* Botón de registro */
+button {
+    background-color: #d62828;
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+button:hover {
+    background-color: #b22222;
+}
+
+/* Responsivo: Ajuste para pantallas pequeñas */
+@media (max-width: 480px) {
+    form {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+/* Contenedor principal */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Ocupa el 80% de la pantalla */
+    text-align: center;
+    background-color: #f8f9fa; /* Color suave */
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* Estilos para cada bloque de contacto */
+.contacto-item {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Iconos de contacto */
+.contacto-item i {
+    font-size: 1.5rem;
+    color: #d62828;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    #contacto {
+        height: auto;
+        padding: 20px;
+    }
+}
+/* Contenedor principal */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; /* Ocupa el 80% de la pantalla */
+    text-align: center;
+    background-color: #f8f9fa; /* Color suave */
+    padding: 40px;
+    border-radius: 12px;
+}
+
+/* Estilos para cada bloque de contacto */
+.contacto-item {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Iconos de contacto */
+.contacto-item i {
+    font-size: 1.5rem;
+    color: #d62828;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    #contacto {
+        height: auto;
+        padding: 20px;
+    }
+}
+
+#contacto {
+    text-align: center;
+    padding: 5px;
+    background-color: #eaef61;
+    border-radius: 7px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+
+
+#contacto {
+    text-align: center;
+    padding: 10px;
+}
+
+.contacto-barra {
+    display: flex;
+    justify-content: space-around;  /* Distribuye los elementos de forma equitativa */
+    align-items: center;  /* Alinea los elementos verticalmente */
+    flex-wrap: wrap;  /* Permite que los elementos se acomoden en una nueva línea si es necesario */
+}
+
+.contacto-barra div {
+    text-align: center;
+    margin: 10px;
+}
+
+.contacto-barra img {
+    width: 50px;  /* Ajusta el tamaño de las imágenes */
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.contacto-barra p {
+    font-size: 14px;  /* Tamaño del texto */
+}
+
+#registro {
+    width: 100%; /* Ocupa todo el ancho del contenedor padre */
+    display: flex;
+    justify-content: center; /* Centra el formulario */
+}
+
+form {
+    background-color: #f4f4f4; /* Color de fondo */
+    padding: 10px; /* Reduce el espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    max-width: 350px; /* Reduce el ancho máximo */
+    width: 100%; /* Asegura que se ajuste al contenedor */
+    text-align: center; /* Alinea el contenido */
+}
+
+form h2 {
+    font-size: 18px; /* Reduce el tamaño del título */
+    margin-bottom: 10px;
+}
+
+form input {
+    width: 90%; /* Ajusta el ancho de los campos */
+    padding: 5px; /* Reduce el relleno */
+    margin: 5px 0; /* Espacio entre los campos */
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 5px;
+    font-size: 14px; /* Reduce el tamaño del texto */
+}
+
+form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 15px; /* Botón más compacto */
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 95%;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+#contacto {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Color de fondo */
+    border-radius: 12px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Ajusta el tamaño del bloque de contacto */
+    margin: 20px auto;
+}
+
+.contacto-barra {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos de manera uniforme */
+    align-items: center; /* Alinea los elementos verticalmente */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 15px;
+    background-color: #a5ee5d; /* Fondo blanco para la barra */
+    border-radius: 10px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-item {
+    display: flex;
+    flex-direction: column; /* Alinea el contenido en forma vertical */
+    align-items: center; /* Centra los elementos */
+    text-align: center;
+    width: 120px; /* Tamaño uniforme para cada ítem */
+}
+
+.contacto-item img {
+    width: 50px; /* Tamaño de los iconos */
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.contacto-item p {
+    font-size: 4px; /* Tamaño del texto */
+    margin: 0;
+}
+
+
+#inicio {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Degradado de colores cálidos y alegres */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.portada {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+.portada img {
+    width: 100%;
+    height: auto;
+    opacity: 0.9; /* Ligera transparencia para combinar con el fondo */
+}
+
+.portada-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.portada-texto h1 {
+    font-size: 28px;
+    color: #ff4b5c; /* Rojo vibrante */
+    margin-bottom: 5px;
+}
+
+.portada-texto p {
+    font-size: 16px;
+    color: #333; /* Texto oscuro para mejor contraste */
+}
+
+
+#contacto {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.contacto-barra {
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 30px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los íconos se ajusten si hay mucho espacio */
+}
+
+.contacto-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contacto-item img {
+    width: 50px; /* Tamaño de los íconos */
+    height: 50px;
+    margin-bottom: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.contacto-item p {
+    margin: 0;
+}
+
+/* Agregar media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .contacto-barra {
+        gap: 20px; /* Menor espacio en pantallas pequeñas */
+    }
+
+    .contacto-item img {
+        width: 40px; /* Íconos más pequeños en pantallas pequeñas */
+        height: 40px;
+    }
+}
